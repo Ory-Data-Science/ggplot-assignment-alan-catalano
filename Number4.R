@@ -6,3 +6,7 @@ dat <- read.csv(url("http://www.esapubs.org/archive/ecol/E088/096/avian_ssd_jan0
                 sep = "\t", na.strings = c("-999.00", "999.00", "-999", "999"))
 
 #your code goes here
+View(dat)
+
+#4.1
+ggplot(data=dat, aes(x=F_mass)) + labs(x="Female Mass(g)") + geom_histogram()
