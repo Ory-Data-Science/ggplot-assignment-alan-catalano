@@ -10,3 +10,6 @@ View(dat)
 
 #4.1
 ggplot(data=dat, aes(x=F_mass)) + labs(x="Female Mass(g)") + geom_histogram()
+
+#4.2
+ggplot(data=dat, aes(x=F_mass)) + labs(x="Female Mass(g)") + geom_histogram(fill = "blue") + scale_x_log10()
