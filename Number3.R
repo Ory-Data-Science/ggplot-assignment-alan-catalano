@@ -19,3 +19,11 @@ ggplot(dat) + geom_point(mapping = aes(x=mass.g., y = newborn.g.)) +
 #3.3
 ggplot(dat) + geom_point(mapping = aes(x=mass.g., y = newborn.g., color = order)) + 
   labs(x = "Log (Adult Mass)", y =  "Log (Newborn Mass)") + scale_y_log10() + scale_x_log10()
+
+#3.4
+ggplot(dat) + geom_point(mapping = aes(x=mass.g., y = newborn.g.)) + 
+  labs(x = "Log (Adult Mass)", y =  "Log (Newborn Mass)") + scale_y_log10() + scale_x_log10() + facet_wrap(~ order)
+
+#3.5
+ggplot(data=dat, aes(x=mass.g., y = newborn.g.)) + geom_point() + geom_smooth() +
+  labs(x = "Log (Adult Mass)", y =  "Log (Newborn Mass)") + scale_y_log10() + scale_x_log10() + facet_wrap(~ order)
