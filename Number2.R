@@ -14,7 +14,10 @@ size_mr_data <- data.frame(
 
 #code goes here
 
-#1
+#2.1
 ggplot(size_mr_data) + geom_point(mapping = aes(x = body_mass, y = metabolic_rate)) + 
   labs(x = "Body Mass", y =  "Metabolic Rate")
+#2.2
+ggplot(size_mr_data) + geom_point(mapping = aes(x = log(body_mass), y = log(metabolic_rate))) + 
+  labs(x = "Log (Body Mass)", y =  "Log (Metabolic Rate)")
 
